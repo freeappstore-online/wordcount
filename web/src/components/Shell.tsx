@@ -80,13 +80,13 @@ export function Shell({ tab, onTabChange, editor, side, topActions }: ShellProps
       {/* Mobile: stacked + bottom tabs */}
       <div className="flex flex-col h-screen md:hidden">
         <header
-          className="flex items-center justify-between px-4 h-14 border-b shrink-0"
+          className="flex flex-wrap items-center justify-between gap-x-3 gap-y-2 px-4 py-2 min-h-14 border-b shrink-0"
           style={{ borderColor: "var(--line)", background: "var(--panel)" }}
         >
           <span className="font-bold" style={{ fontFamily: "Fraunces, serif" }}>
             Word Counter
           </span>
-          <div className="flex items-center gap-1.5">{topActions}</div>
+          <div className="flex flex-wrap items-center gap-1.5">{topActions}</div>
         </header>
         <main className="flex-1 overflow-auto p-3 flex flex-col gap-4">
           {editor}
